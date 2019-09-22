@@ -1,2 +1,2 @@
-#!/bin/sh
-feh --no-fehbg --bg-fill '/home/tomasz/.wallpaper' 
+#!/bin/bash
+feh --no-fehbg --bg-fill "$(< "${HOME}/.cache/wal/wal")"
