@@ -8,7 +8,7 @@ url="https://tools.suckless.org/dmenu/"
 license=('MIT')
 depends=('sh' 'libxinerama' 'libxft')
 options=(zipman)
-source("https://dl.suckless.org/tools/$pkgname-$pkgver.tar.gz" "config.h")
+source=("https://dl.suckless.org/tools/$pkgname-$pkgver.tar.gz" "config.h")
 sha256sums=('b3971f4f354476a37b2afb498693649009b201550b0c7c88e866af8132b64945' 'SKIP')
 
 prepare() {
