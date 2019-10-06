@@ -1,14 +1,20 @@
+#!/bin/sh
+
 # Set Polish keyboard layout
 setxkbmap pl
 
 # Run compositor
-compton &
+command -v compton >/dev/null 2>&1 && { compton & }
 
 # Statusbar loop
-while true; do
-    xsetroot -name "$( date +'%a %d %b, %R' )"
-    sleep 1s # Update every second
-done &
+command -v xsetroot >/dev/null 2>&1 && {
+
+    while true; do
+        xsetroot -name "$( date +'%a %d %b, %R' )"
+        sleep 1s # Update every second
+    done &
+
+}
 
 # Set up monitors
 command -v xrandr >/dev/null 2>&1 && {
