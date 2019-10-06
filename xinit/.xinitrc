@@ -9,6 +9,9 @@ command -v numlockx >/dev/null 2>&1 && { numlockx & }
 # Run compositor
 command -v compton >/dev/null 2>&1 && { compton & }
 
+# Run Redshift
+command -v redshift >/dev/null 2>&1 && { redshift & }
+
 # Statusbar loop
 command -v xsetroot >/dev/null 2>&1 && {
 
