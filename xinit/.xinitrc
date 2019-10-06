@@ -3,6 +3,9 @@
 # Set Polish keyboard layout
 setxkbmap pl
 
+# Activate Numlock
+command -v numlockx >/dev/null 2>&1 && { numlockx & }
+
 # Run compositor
 command -v compton >/dev/null 2>&1 && { compton & }
 
