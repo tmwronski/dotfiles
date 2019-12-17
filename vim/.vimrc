@@ -1,6 +1,25 @@
 " Vim configuration file
 "
 
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+
+" A Vim Plugin for Lively Previewing LaTeX PDF Output
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
+Plug 'junegunn/goyo.vim'
+
+Plug 'junegunn/limelight.vim'
+
+" Initialize plugin system
+call plug#end()
+
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+let g:livepreview_previewer = 'evince'
+
 " set UTF-8 encoding
 set enc=utf-8
 set fenc=utf-8
